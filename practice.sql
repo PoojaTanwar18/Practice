@@ -23,3 +23,8 @@ select truncate(12.111111,1);
 select truncate(12.111111,3);
 select mod(10,4);
 select floor(10/4);
+
+use class;
+create table student(id int primary key, name varchar(10) not null);
+show tables;
+desc student;
