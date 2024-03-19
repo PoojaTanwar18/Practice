@@ -23,7 +23,22 @@ desc student;
  alter table student modify column Ename char(30) not null;
  desc student;
  -- rename the table
- alter table student rename ITvedant_student;
- desc ITvedant_student;
+ alter table ITvedant_student rename student;
+ desc student;
  show tables;
- 
+ select * from student;
+ insert into student values(1, 'abc','Thane','Mumbai');
+ select * from student;
+ insert into student values
+ (2, 'xyz','Dwarka','Delhi'),
+ (3, 'def','Mandir','Haridwar'),
+ (4, 'ghi','Amritsar','Punjab');
+ select * from student;
+ update student set  Ename ='Minnie', branch = 'Wagle', city = 'Mumbai' where Uid = 1;
+ update student set Ename = 'ABC' where Uid <=3;
+ -- it is used to delete the data but keeps the structure of the table
+ truncate table student;
+
+-- delete 
+delete from student where Uid = 4; 
+select * from student;
